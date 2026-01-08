@@ -117,7 +117,7 @@ No modules.
 |------|------|
 | [helm_release.cilium](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [kubectl_manifest.cilium_clusterwide_policies](https://registry.terraform.io/providers/alekc/kubectl/2.1.3/docs/resources/manifest) | resource |
-| [kubernetes_namespace.cilium](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace) | resource |
+| [kubernetes_namespace_v1.cilium](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace_v1) | resource |
 | [kubectl_path_documents.policies](https://registry.terraform.io/providers/alekc/kubectl/2.1.3/docs/data-sources/path_documents) | data source |
 
 ## Inputs
