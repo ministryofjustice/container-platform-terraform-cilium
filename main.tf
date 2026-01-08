@@ -22,7 +22,7 @@ resource "kubectl_manifest" "cilium_clusterwide_policies" {
   ]
 }
 
-resource "kubernetes_namespace" "cilium" {
+resource "kubernetes_namespace_v1" "cilium" {
   metadata {
     name = "cilium"
 
@@ -75,6 +75,6 @@ resource "helm_release" "cilium" {
   ]
 
   depends_on = [
-    kubernetes_namespace.cilium
+    kubernetes_namespace_v1.cilium
   ]
 }
