@@ -1,15 +1,15 @@
-# cloud-platform-terraform-cilium
+# container-platform-terraform-cilium
 
-[![Releases](https://img.shields.io/github/v/release/ministryofjustice/cloud-platform-terraform-cilium.svg)](https://github.com/ministryofjustice/cloud-platform-terraform-cilium/releases)
+[![Releases](https://img.shields.io/github/v/release/ministryofjustice/container-platform-terraform-cilium.svg)](https://github.com/ministryofjustice/container-platform-terraform-cilium/releases)
 
-This Terraform module will create a [Cilium](https://cilium.io/) installation for use on the Cloud Platform.
+This Terraform module will create a [Cilium](https://cilium.io/) installation for use on the Container Platform.
 
 
 ## Usage
 
 ```hcl
 module "cilium" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-cilium?ref=version" # use the latest release
+  source = "github.com/ministryofjustice/container-platform-terraform-cilium?ref=version" # use the latest release
 
   # Configuration
   # ...
@@ -95,7 +95,7 @@ If cilium is deployed post cluster install, the above NWP won't work until all i
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.2.5 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >=4.0.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 6.0 |
 | <a name="requirement_kubectl"></a> [kubectl](#requirement\_kubectl) | 2.1.3 |
 | <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | >=2.0.0 |
 
