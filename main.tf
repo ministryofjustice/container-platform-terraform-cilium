@@ -73,6 +73,37 @@ resource "helm_release" "cilium" {
       value = "native"
     }
   ]
+  values = [
+    yamlencode({
+      operator = {
+        tolerations = [
+          {
+            key      = "system-node"
+            operator = "Equal"
+            value    = "true"
+            effect   = "NoSchedule"
+          }
+        ]
+        nodeSelector = {
+          "cloud-platform.justice.gov.uk/system-ng" = "true"
+        }
+        affinity = {
+          podAntiAffinity = {
+            requiredDuringSchedulingIgnoredDuringExecution = [
+              {
+                labelSelector = {
+                  matchLabels = {
+                    "app.kubernetes.io/name" = "cilium-operator"
+                  }
+                }
+                topologyKey = "kubernetes.io/hostname"
+              }
+            ]
+          }
+        }
+      }
+    })
+  ]
 
   depends_on = [
     kubernetes_namespace_v1.cilium
