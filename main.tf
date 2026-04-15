@@ -32,12 +32,12 @@ resource "kubernetes_namespace_v1" "cilium" {
     }
 
     annotations = {
-      "cloud-platform.justice.gov.uk/application"                = "cilium"
-      "cloud-platform.justice.gov.uk/business-unit"              = "Platforms"
-      "cloud-platform.justice.gov.uk/owner"                      = "Cloud Platform: platforms@digital.justice.gov.uk"
-      "cloud-platform.justice.gov.uk/source-code"                = "https://github.com/ministryofjustice/cloud-platform-infrastructure"
-      "cloud-platform.justice.gov.uk/can-tolerate-master-taints" = "true"
-      "cloud-platform-out-of-hours-alert"                        = "true"
+      "container-platform.service.justice.gov.uk/application"   = "cilium"
+      "container-platform.service.justice.gov.uk/business-unit" = "OCTO"
+      "container-platform.service.justice.gov.uk/owner"         = "Container Platform: platforms@digital.justice.gov.uk"
+      "container-platform.service.justice.gov.uk/service-area"  = "Hosting"
+      "container-platform.service.justice.gov.uk/is-production" = "true"
+      "container-platform.service.justice.gov.uk/source-code"   = "https://github.com/ministryofjustice/modernisation-platform-environments/tree/main/terraform/environments/cloud-platform"
     }
   }
 

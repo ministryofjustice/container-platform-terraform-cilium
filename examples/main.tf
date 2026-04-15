@@ -4,6 +4,6 @@ provider "aws" {
 
 module "template" {
   source = "../"
-  # source = "github.com/ministryofjustice/cloud-platform-terraform-template?ref=version" # use the latest release
+  # source = "github.com/ministryofjustice/container-platform-terraform-template?ref=version" # use the latest release
 
 }
